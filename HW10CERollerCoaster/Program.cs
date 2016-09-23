@@ -14,6 +14,28 @@ namespace HW10CERollerCoaster
             StreamReader hamlet = new StreamReader("..\\..\\..\\Hamlet.txt");
             string line = hamlet.ReadLine();
 
+            while (line != null)
+            {
+                char[] array = line.ToCharArray();
+                line = hamlet.ReadLine();
+
+                for (int i = 0; i < array.Length; i++)
+                {
+                    char altLetter = array[i];
+
+                    if (char.IsLetter(altLetter)/* && char.IsLower(altLetter)*/)
+                    {
+                        array[i] = char.ToUpper(altLetter);
+                        i ++;
+                    }
+                }
+
+                string result = new string(array);
+
+                Console.WriteLine(result);
+            }
+
+            hamlet.Close();
         }
     }
 }
