@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+//using System.Text.RegularExpressions;
 
 namespace HW10CERollerCoaster
 {
@@ -16,17 +17,23 @@ namespace HW10CERollerCoaster
 
             while (line != null)
             {
-                char[] array = line.ToCharArray();
+                char[] array = line.ToCharArray(); 
                 line = hamlet.ReadLine();
 
                 for (int i = 0; i < array.Length; i++)
                 {
                     char altLetter = array[i];
 
-                    if (char.IsLetter(altLetter)/* && char.IsLower(altLetter)*/)
+                    //If () attempts
+                    //Regex.IsMatch(line, "^[a-z, A-Z]+$");
+                    //Regex.IsMatch(line, "\\D")
+                    //array[i] >= 'a' && array[i] <= 'z' || array[i] >= 'A' && array[i] <= 'Z'
+                    ////char.IsLetter(altLetter) && char.IsLower(altLetter)
+
+                    if (char.IsLetter(altLetter))
                     {
                         array[i] = char.ToUpper(altLetter);
-                        i ++;
+                        i++;
                     }
                 }
 
