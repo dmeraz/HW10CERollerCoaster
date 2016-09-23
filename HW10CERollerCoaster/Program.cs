@@ -24,12 +24,6 @@ namespace HW10CERollerCoaster
                 {
                     char altLetter = array[i];
 
-                    //If () attempts
-                    //Regex.IsMatch(line, "^[a-z, A-Z]+$");
-                    //Regex.IsMatch(line, "\\D")
-                    //array[i] >= 'a' && array[i] <= 'z' || array[i] >= 'A' && array[i] <= 'Z'
-                    ////char.IsLetter(altLetter) && char.IsLower(altLetter)
-
                     if (char.IsLetter(altLetter))
                     {
                         array[i] = char.ToUpper(altLetter);
